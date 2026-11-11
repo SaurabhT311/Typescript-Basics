@@ -1,7 +1,7 @@
 type GreetProps = {
   name: string;
   messageCount: number;
-  isLoggedIn: Boolean;
+  isLoggedIn?: Boolean;
 };
 
 const Greet = (props: GreetProps) => {
