@@ -18,6 +18,7 @@ import { MutableRef } from "./components/ref/MutableRef";
 import { CounterComponent } from "./components/class/CounterComponent";
 import { Private } from "./components/auth/Private";
 import { Profile } from "./components/auth/Profile";
+import { List } from "./components/generics/List";
 
 function App() {
   const personName = {
@@ -54,7 +55,21 @@ function App() {
       <DomRef />
       <MutableRef />
       <CounterComponent message="The count value is" />
-      <Private isLoggedIn={false} component={Profile}/>
+      <Private isLoggedIn={false} component={Profile} />
+      <List
+        items={["batman", "superman", "flash"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 2]} onClick={(item) => console.log(item)} />
+      <List
+        items={[
+          { id:1,firstName: "Bruce", lastName: "Wayne" },
+          { id:2,firstName: "Clark", lastName: "Kent" },
+          { id:3,firstName: "Barry", lastName: "Allen" },
+        ]}
+        onClick={(item) => console.log(item)}
+        renderItem={(user) => <span>{user.firstName}</span>}
+      />
     </div>
   );
 }
