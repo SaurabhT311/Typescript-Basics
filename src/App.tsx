@@ -45,9 +45,18 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Leonardo Di Caprio</Heading>
       </Oscar>
-      <Button handleClick={(event, id) => {console.log("Button Clicked!", event, id)}} />
-      <Input value ="" handleChange={(event) => {console.log(event)}} />
-      <Container styles={{border: "1px solid black", padding: "1rem"}} />
+      <Button
+        handleClick={(event, id) => {
+          console.log("Button Clicked!", event, id);
+        }}
+      />
+      <Input
+        value=""
+        handleChange={(event) => {
+          console.log(event);
+        }}
+      />
+      <Container styles={{ border: "1px solid black", padding: "1rem" }} />
       <Counter />
       <ThemeContextProvider>
         <Box />
@@ -66,16 +75,16 @@ function App() {
       <List items={[1, 2, 2]} onClick={(item) => console.log(item)} />
       <List
         items={[
-          { id:1,firstName: "Bruce", lastName: "Wayne" },
-          { id:2,firstName: "Clark", lastName: "Kent" },
-          { id:3,firstName: "Barry", lastName: "Allen" },
+          { id: 1, firstName: "Bruce", lastName: "Wayne" },
+          { id: 2, firstName: "Clark", lastName: "Kent" },
+          { id: 3, firstName: "Barry", lastName: "Allen" },
         ]}
         onClick={(item) => console.log(item)}
         renderItem={(user) => <span>{user.firstName}</span>}
       />
-      <RandomNumber value={-10} isNegative/>
+      <RandomNumber value={-10} isNegative />
       <Toast position="center" />
-      <CustomButton variant="primary" onClick = {() => console.log("clicked")}>
+      <CustomButton variant="primary" onClick={() => console.log("clicked")}>
         Primary Button
       </CustomButton>
     </div>
