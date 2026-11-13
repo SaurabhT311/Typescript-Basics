@@ -15,6 +15,7 @@ import { UserContextProvider } from "./components/context/UserContext";
 import { User } from "./components/context/User";
 import { DomRef } from "./components/ref/DomRef";
 import { MutableRef } from "./components/ref/MutableRef";
+import { CounterComponent } from "./components/class/CounterComponent";
 
 function App() {
   const personName = {
@@ -50,6 +51,7 @@ function App() {
       </UserContextProvider>
       <DomRef />
       <MutableRef />
+      <CounterComponent message="The count value is" />
     </div>
   );
 }
