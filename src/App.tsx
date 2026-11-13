@@ -19,6 +19,7 @@ import { CounterComponent } from "./components/class/CounterComponent";
 import { Private } from "./components/auth/Private";
 import { Profile } from "./components/auth/Profile";
 import { List } from "./components/generics/List";
+import { RandomNumber } from "./components/restriction/RandomNumber";
 
 function App() {
   const personName = {
@@ -70,6 +71,7 @@ function App() {
         onClick={(item) => console.log(item)}
         renderItem={(user) => <span>{user.firstName}</span>}
       />
+      <RandomNumber value={-10} isNegative/>
     </div>
   );
 }
