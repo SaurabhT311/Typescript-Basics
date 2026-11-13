@@ -20,7 +20,8 @@ import { Private } from "./components/auth/Private";
 import { Profile } from "./components/auth/Profile";
 import { List } from "./components/generics/List";
 import { RandomNumber } from "./components/restriction/RandomNumber";
-import { Toast } from "./components/templateLiterals/toast";
+import { Toast } from "./components/templateLiterals/Toast";
+import { CustomButton } from "./components/html/CustomButton";
 
 function App() {
   const personName = {
@@ -74,6 +75,9 @@ function App() {
       />
       <RandomNumber value={-10} isNegative/>
       <Toast position="center" />
+      <CustomButton variant="primary" onClick = {() => console.log("clicked")}>
+        Primary Button
+      </CustomButton>
     </div>
   );
 }
